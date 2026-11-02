@@ -59,6 +59,7 @@ $("form").onsubmit = e => {
   if ($("f-nota").value.trim()) t.push(`Alergias o comentarios: ${$("f-nota").value.trim()}`);
   window.open(`https://wa.me/${L.whatsapp}?text=${encodeURIComponent(t.join("\n"))}`, "_blank", "noopener");
 };
+$("flotante").href = `https://wa.me/${L.whatsapp}?text=${encodeURIComponent(`Hola, quiero información para reservar en ${L.nombre}.`)}`;
 $("imprimir").onclick = () => window.print();
 
 /** Próxima fecha señalada, para la cuenta atrás. */
