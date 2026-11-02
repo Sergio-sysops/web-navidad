@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es" data-local="restaurante">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navidad</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="nieve" aria-hidden="true"></div>
+<header class="portada">
+  <p class="tipo" data-n="tipo"></p>
+  <h1 data-n="nombre"></h1>
+  <p class="lema" data-n="lema"></p>
+  <div id="cuenta" class="cuenta" hidden></div>
+  <a href="#reservar" class="boton">Reservar mesa</a>
+  <a href="#menus" class="boton claro">Ver menús</a>
+</header>
+<nav class="menu"><a href="#menus">Menús</a><a href="#encargos">Para llevar</a><a href="#reservar">Reservar</a><a href="#donde">Dónde estamos</a></nav>
+<main>
+  <section id="menus"><h2>Menús de Navidad</h2><div id="lista-menus" class="tarjetas"></div>
+    <p class="centro"><button id="imprimir" class="boton claro">🖨️ Imprimir la carta</button></p>
+    <details class="alergenos"><summary>Información sobre alérgenos</summary><p>Cada plato indica sus alérgenos. Si tienes alguna alergia o intolerancia, avísanos al reservar. Tenemos la información completa a tu disposición.</p></details>
+  </section>
+  <section id="encargos" class="alterna"><h2 data-n="tituloEncargos"></h2><p class="centro" data-n="textoEncargos"></p><div id="lista-encargos" class="encargos"></div></section>
+  <section id="reservar"><h2>Reserva tu mesa</h2>
+    <form id="form" class="form">
+      <label>Menú<select id="f-menu"></select></label>
+      <label>Día<select id="f-dia"></select></label>
+      <div class="dos"><label>Personas<input id="f-personas" type="number" min="1" max="60" value="4" inputmode="numeric"></label>
+      <label>Hora<select id="f-hora"></select></label></div>
+      <label>Nombre<input id="f-nombre" required maxlength="60" autocomplete="name"></label>
+      <label>Alergias o comentarios<textarea id="f-nota" rows="2" maxlength="300"></textarea></label>
+      <p id="total" class="total"></p>
+      <button class="boton" type="submit">📲 Enviar reserva por WhatsApp</button>
+      <p class="pequeno">Se abrirá WhatsApp con tu reserva escrita. La mesa queda confirmada cuando el local te responde.</p>
+    </form>
+  </section>
+  <section id="donde" class="alterna"><h2>Dónde estamos</h2><p class="centro"><b data-n="direccion"></b><br><span data-n="horario"></span></p></section>
+</main>
+<footer><p>Demo de un negocio ficticio. Precios y platos de ejemplo. Web de muestra de <a href="https://sergio-sysops.github.io/nexo-ia/">Nexo IA</a>.</p></footer>
+<script src="datos.js"></script><script src="app.js"></script>
+</body></html>
